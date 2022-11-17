@@ -16,11 +16,10 @@ import tienda.modelo.bean.Usuario;
 import tienda.modelo.dao.EmpleadoDAO;
 import tienda.modelo.dao.UsuarioDAO;
 
-/**
- *
- * @author Andres
- */
-@WebServlet(name = "ServletUsuario", urlPatterns = {"/ServletUsuario","/login","/cerrarSesion"})
+@WebServlet(name = "ServletUsuario", urlPatterns =
+{
+    "/ServletUsuario", "/login", "/cerrarSesion"
+})
 public class ServletUsuario extends HttpServlet {
 
     /**
@@ -35,30 +34,35 @@ public class ServletUsuario extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try ( PrintWriter out = response.getWriter()) {
+        try ( PrintWriter out = response.getWriter())
+        {
             /* TODO output your page here. You may use following sample code. */
-          String path = request.getServletPath();
-            if (path.equals("/login")) {
+            String path = request.getServletPath();
+            if (path.equals("/login"))
+            {
                 //capturar valotres del formulario
                 String us = request.getParameter("us");
                 String cl = request.getParameter("cl");
                 //verificar is usuario esta en la base de datos
                 Usuario user = UsuarioDAO.login(us, cl);
-                if (user != null) {
+                if (user != null)
+                {
                     //asignar usuario a un atributo usuario y ala vez a es una variable de serssion
                     request.getSession().setAttribute("usuario", user);
-                    
+
                     int idemp = user.getIdemp();
                     Empleado emp = EmpleadoDAO.login(idemp);
                     request.setAttribute("empleado", emp);
                     //ir a la pagina principal
                     request.getRequestDispatcher("WEB-INF/principal.jsp").forward(request, response);
-                } else {
+                } else
+                {
                     request.setAttribute("mensaje", "Usuario y/o clave incorrecto...");
                     request.getRequestDispatcher("login.jsp").forward(request, response);
                 }
             }
-            if(path.equals("/cerrarSesion")){
+            if (path.equals("/cerrarSesion"))
+            {
                 //CERRAR SESION
                 request.getSession().invalidate();
                 //ir al login

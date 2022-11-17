@@ -1,9 +1,3 @@
-<%-- 
-    Document   : formEmpleado
-    Created on : 3 nov. 2022, 09:06:13
-    Author     : Andres
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

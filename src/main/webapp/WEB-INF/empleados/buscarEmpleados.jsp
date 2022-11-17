@@ -12,9 +12,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <title>Buscar empleados</title>
-        <!<!-- Navbar Template · Bootstrap v5.2 -->
+        <!-- Navbar Template · Bootstrap v5.2 -->
         <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/navbars-offcanvas/">
-        <link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Custom styles for this template -->
     </head>
     <body>
@@ -101,7 +101,7 @@
 
 
 
-        <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
         <script>
 
             // para el buscador
