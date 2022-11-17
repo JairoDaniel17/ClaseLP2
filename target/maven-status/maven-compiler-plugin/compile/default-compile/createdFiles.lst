@@ -1,0 +1,11 @@
+com\mycompany\apptienda\JakartaRestConfiguration.class
+tienda\modelo\bean\Usuario.class
+tienda\modelo\dao\EmpleadoDAO.class
+tienda\modelo\dao\Test.class
+tienda\conexion\test.class
+tienda\controlador\empleadoBuscar\buscarEmpleado.class
+tienda\modelo\dao\UsuarioDAO.class
+tienda\conexion\Conexion.class
+com\mycompany\apptienda\resources\JakartaEE8Resource.class
+tienda\controlador\usuario\ServletUsuario.class
+tienda\modelo\bean\Empleado.class
